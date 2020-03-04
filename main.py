@@ -1,7 +1,7 @@
 from sys import platform
 
-from Backend import app
-from Backend.models import db
+from backend import app
+from backend.models import db
 
 if __name__ == "__main__":
     db.create_all()

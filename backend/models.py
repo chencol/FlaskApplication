@@ -1,6 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 
-from Backend import app
+from backend import app
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root:@127.0.0.1:3306/flask1"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True

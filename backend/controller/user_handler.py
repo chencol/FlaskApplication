@@ -1,8 +1,8 @@
 import jwt
 from flask import request, jsonify, session
 
-from Backend import app
-from Backend.models import User
+from backend import app
+from backend.models import User
 
 
 @app.route('/verify_user')

@@ -1,6 +1,6 @@
 from flask import request, jsonify
 
-from Backend import app
+from backend import app
 
 
 @app.route('/')

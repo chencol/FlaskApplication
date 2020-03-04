@@ -10,5 +10,5 @@ app.config.from_object(__name__)
 app.config["SECRET_KEY"] = os.urandom(24)
 CORS(app)
 
-from Backend import views
-from Backend.controller import user_handler
+from backend import views
+from backend.controller import user_handler
