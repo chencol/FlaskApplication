@@ -2,7 +2,7 @@ $(function() {
   $("#login_btn").bind("click", function() {
     name = $("#username").val();
     $.getJSON(
-      "http://127.0.0.1:5000/verify_user",
+      "http://34.68.146.243:5000/verify_user",
       {
         name: $('input[id="username"]').val(),
         password: $('input[id="password"]').val()
