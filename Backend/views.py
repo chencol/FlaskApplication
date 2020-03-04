@@ -7,6 +7,10 @@ from Backend import app
 def hello_world():
     return 'Hello, World! Remove unnecessary Test!'
 
+@app.route('/b1')
+def b1():
+    return 'Branch 1 for testing purpose!'
+
 # @app.route('/verify_user')
 # def verify_user():
 #     name = request.args.get("name")
