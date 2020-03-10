@@ -5,18 +5,21 @@ from backend import app
 from backend.models import User
 
 
-@app.route('/verify_user')
+@app.route('/verify_user', methods=['GET', 'POST'])
 def verify_user():
 
-    username = request.args.get("name")
-    password = request.args.get("password")
+    # username = request.args.get("name")
+    username = request.form.get('name')
+    # password = request.args.get("password")
+    password = request.form.get('password')
     # user = User.query.filter(User.name==username).first()
     user = User.query.filter_by(name=username).first()
     #There is difference between filter and filter by!
-
+    print("username is ", username)
+    print("password is ", password)
     if user==None:
         result = "false"
-        return jsonify(result=result, name=username)
+        return jsonify(result=result)
     else:
         if user.pwd == password:
             # token = str(jwt.encode({"username":username}, 'secret', algorithm='HS256'))
