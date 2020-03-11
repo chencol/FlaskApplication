@@ -18,7 +18,7 @@ $(function() {
               $("#login_error").css("color", "black");
               $("#login_error").css("opacity", "1");
               $("#login_error").text(
-                "Welcome home " + username + "! We are now bring u home!"
+                "Welcome home! Dear " + username + "! We are now bring u home!"
               );
               sessionStorage.setItem("access_token", data.token);
               sessionStorage.setItem("username", data.username);
