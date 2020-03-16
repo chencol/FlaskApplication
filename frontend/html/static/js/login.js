@@ -3,6 +3,9 @@ $(function() {
     event.preventDefault();
     $.ajax({
         url:env.base_api_url + "verify_user",
+        xhrFields: {
+            withCredentials: true
+        },
         method:"POST",
         data:{
             name: $('input[id="username"]').val(),
@@ -20,8 +23,10 @@ $(function() {
               $("#login_error").text(
                 "Welcome home! Dear " + username + "! We are now bring u home!"
               );
-              sessionStorage.setItem("access_token", data.token);
-              sessionStorage.setItem("username", data.username);
+              localStorage.setItem("access_token", data.token);
+              localStorage.setItem("username", data.username);
+//              sessionStorage.setItem("access_token", data.token);
+//              sessionStorage.setItem("username", data.username);
               setTimeout(function() {
                    window.location.href = env.base_url + "home.html";
               }, 2000);
